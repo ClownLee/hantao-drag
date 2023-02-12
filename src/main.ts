@@ -1,5 +1,8 @@
 import { createApp } from 'vue'
-import './style.css'
+import 'virtual:windi.css'
 import App from './App.vue'
+import Hantao from './index'
 
-createApp(App).mount('#app')
+createApp(App)
+.use(Hantao)
+.mount('#app')
