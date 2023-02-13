@@ -1,5 +1,6 @@
 import { defineComponent } from 'vue'
 import styled from 'vue3-styled-components'
+import DragContainer from '..'
 
 const props = {
   indx: {
@@ -32,10 +33,14 @@ export default defineComponent({
       console.log('哈哈哈')
     }
 
+    const dragOver = (e: any) =>{
+      console.log('目标元素上移动', e)
+    }
+
     return () => (
       <Div>
         <div
-        className='bg-red-500 bg-opacity-25 w-24 h-24 cursor-move'
+        class='bg-red-500 bg-opacity-25 w-24 h-24 cursor-move'
         draggable='true'
         data-copy='true'
         id='hahaha'
@@ -44,8 +49,8 @@ export default defineComponent({
         </div>
 
         <div
-        className='w-full h-xs border-1 border-gray-500/20 border-dashed'
-        onDragover={e => e.preventDefault()}
+        class='w-full h-xs border-1 border-gray-500/20 border-dashed'
+        onDragover={e => dragOver(e)}
         onDrop={(e) => drop(e)}>
 
         </div>
