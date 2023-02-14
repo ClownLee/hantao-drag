@@ -16,7 +16,7 @@ export default defineComponent({
     return () => (<Div class='w-30 h-30 bg-red-300'>
       工具箱
       <div>
-        {slots.default()}
+        {slots.default && slots.default()}
       </div>
     </Div>)
   }
