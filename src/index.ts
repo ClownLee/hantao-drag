@@ -1,10 +1,10 @@
 
 import { App } from 'vue'
-import DragContainer from '@/package/compenents/DragContainer'
+import ToolBox from '@/package/compenents/ToolBox'
 
 
 const components = [
-  DragContainer,
+  ToolBox,
 ]
 
 const install = (app: App) => {

@@ -4,7 +4,11 @@
 
 <template>
   <div>
-    <ht-drag-container></ht-drag-container>
+    <HToolBox>
+      <template #default>
+        哈哈哈
+      </template>
+    </HToolBox>
   </div>
 </template>
 
